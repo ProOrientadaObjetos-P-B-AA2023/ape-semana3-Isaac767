@@ -16,7 +16,6 @@ class Terreno{
      }
      public void setAnchoTerreno(double anchoTerreno){
          this.anchoTerreno = anchoTerreno;
-     
      }
      public void setLargoTerreno(double LargoTerreno){
          this.largoTerreno = LargoTerreno;
@@ -24,30 +23,26 @@ class Terreno{
      public void setValorMetroCuadrado(double ValorMetroCuadrado){
          this.ValorMetroCuadrado = ValorMetroCuadrado;
      }
-     public void CalcularAreaTerreno(){
+     public void calcularAreaTerreno(){
          this.areaTerreno = this.anchoTerreno * this.largoTerreno;
      }
-     public void CalcularCostoTerreno(){
+     public void calcularCostoTerreno(){
          this.costo_terreno = this.areaTerreno * this.ValorMetroCuadrado;
      }
      public double getCostoTerreno(){
          return this.costo_terreno;
-     
      }
         public double getAnchoTerreno(){
          return this.anchoTerreno;
      }
         public double getLargoTerreno(){
          return this.largoTerreno;
-     
      }
         public double getAreaTerreno(){
          return this.areaTerreno;
-     
      }
         public double getValorMetroCuadrado(){
          return this.ValorMetroCuadrado;
-     
      }
         public String toString(){
             String msj=String.format("DATOS DEL TERRENO"
@@ -60,15 +55,14 @@ class Terreno{
                     this.getValorMetroCuadrado(), this.getAreaTerreno(),
                     this.getCostoTerreno());
             return msj;
-        
         }
 
 }
 public class Problema1 {
     public static void main(String[] args) {
         Terreno terreno1 = new Terreno(10,2,2);
-        terreno1.CalcularAreaTerreno();
-        terreno1.CalcularCostoTerreno();
+        terreno1.calcularAreaTerreno();
+        terreno1.calcularCostoTerreno();
         System.out.println(terreno1);
     }
     
